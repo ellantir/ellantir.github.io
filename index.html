@@ -70,6 +70,34 @@
             color: var(--laranja);
         }
 
+        /* Redes sociais links */
+        .redes-sociais {
+            display: flex;
+            flex-direction: column; /* Display links in a column */
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .redes-sociais a {
+            color: var(--branco);
+            font-size: 18px; /* Adjust text size */
+            transition: color 0.3s ease;
+            display: flex; /* Use flex to align icon and text */
+            align-items: center;
+        }
+
+        .redes-sociais a img {
+            margin-right: 10px; /* Add space between icon and text */
+        }
+
+        .redes-sociais a i {
+            margin-right: 10px; /* Space between Font Awesome icon and text */
+        }
+
+        .redes-sociais a:hover {
+            color: var(--laranja);
+        }
+
         /* Estilo do conteúdo principal */
         main {
             flex: 1;
@@ -135,23 +163,6 @@
             background-color: var(--azul-escuro);
         }
 
-        /* Estilo para a secção de redes sociais */
-        .redes-sociais {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .redes-sociais a {
-            color: var(--branco);
-            font-size: 24px;
-            transition: color 0.3s ease;
-        }
-
-        .redes-sociais a:hover {
-            color: var(--laranja);
-        }
-
         /* Estilo do vídeo de apresentação */
         .video-container {
             margin-top: 315px;
@@ -183,9 +194,15 @@
             </div>
 
             <div class="redes-sociais">
-                <p><a href="https://www.facebook.com/Ellantir" target="_blank">Facebook</a></p>
-                <p><a href="https://twitter.com" target="_blank">Twitter</a></p>
-                <p><a href="https://linkedin.com" target="_blank">LinkedIn</a></p>
+                <a href="https://www.facebook.com/Ellantir" target="_blank">
+                    <img src="facebook-icon.png" alt="Facebook" width="20" height="20"> Facebook
+                </a>
+                <a href="https://www.instagram.com/ellantir/" target="_blank">
+                    <img src="instagram-icon.png" alt="Twitter" width="20" height="20"> Instagram
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="linkedin-icon.png" alt="LinkedIn" width="20" height="20"> LinkedIn
+                </a>
             </div>
         </nav>
 
