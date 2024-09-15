@@ -19,8 +19,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            height: 100vh;
             background-color: var(--cinza-claro);
         }
 
@@ -30,6 +28,7 @@
             padding: 20px;
             display: flex;
             align-items: center;
+            justify-content: center; /* Center content horizontally */
         }
 
         header img {
@@ -41,6 +40,12 @@
             color: var(--branco);
             font-size: 24px;
             margin: 0;
+        }
+
+        /* Layout container for nav and main */
+        .container {
+            display: flex;
+            height: calc(100vh - 100px); /* Make sure it accounts for header height */
         }
 
         /* Painel de navegação lateral */
@@ -164,65 +169,68 @@
     <!-- Header section with image and title -->
     <header>
         <img src="header.png" alt="Author Logo">
-        <h1>Fred Olaio - Author</h1>
+        <h1>Ellantir</h1>
     </header>
 
-    <!-- Painel de navegação lateral -->
-    <nav>
-        <div>
-            <h2 style="color: var(--laranja);">Autor</h2>
-            <a href="#biography">Biography</a>
-            <a href="#Titles">Published Titles</a>
-            <a href="#Contact">Contact</a>
-        </div>
-
-        <div class="redes-sociais">
-            <a href="https://www.facebook.com/Ellantir" target="_blank">Facebook</a>
-            <a href="https://twitter.com" target="_blank">Twitter</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        </div>
-    </nav>
-
-    <!-- Conteúdo principal -->
-    <main>
-        <!-- Secção de Biografia -->
-        <section id="biografia">
-            <h1>Biography</h1>
-            <p>Fred Olaio, a Portuguese-born author, was destined for a life of creativity and imagination...</p>
-        </section>
-
-        <!-- Secção de Obras Publicadas -->
-        <section id="obras">
-            <h1>Obras Publicadas</h1>
-            <div class="obras">
-                <div class="obra">
-                    <h3>Ellantir: A Falha da Criação</h3>
-                    <p>Parte 1 da saga Ellantir, em língua portuguesa.</p>
-                </div>
-                <div class="obra">
-                    <h3>Ellantir: The Flaw in Creation</h3>
-                    <p>Part 1 of the Ellantir saga, in English language.</p>
-                </div>
+    <!-- Main content with sidebar -->
+    <div class="container">
+        <!-- Painel de navegação lateral -->
+        <nav>
+            <div>
+                <h2 style="color: var(--laranja);">Autor</h2>
+                <a href="#biography">Biography</a>
+                <a href="#Titles">Published Titles</a>
+                <a href="#Contact">Contact</a>
             </div>
-        </section>
 
-        <!-- Secção de Vídeo de Apresentação -->
-        <section class="video-container">
-            <h1>Apresentação</h1>
-            <iframe src="https://z-p3-video-prg1-1.xx.fbcdn.net/v/t42.1790-2/234403505_148349780766811_2186015875243020130_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=55d0d3&efg=eyJybHIiOjQxMiwicmxhIjo1MTIsInZlbmNvZGVfdGFnIjoic3ZlX3NkIiwidmlkZW9faWQiOjkzMzM1MTM0MDU1MzU4NX0%3D&_nc_ohc=0X536dp8EOoQ7kNvgHgPskq&rl=412&vabr=229&_nc_ht=z-p3-video-prg1-1.xx&edm=AGo2L-IEAAAA&_nc_gid=Au_-KUBzl-xIN7_BScXapNH&oh=00_AYCftzqgJctDlNJhh9vFcy8qZ1IYdkIAoHaWYHMDNaIWqQ&oe=66ED3531" title="Vídeo de Apresentação"></iframe>
-        </section>
+            <div class="redes-sociais">
+                <a href="https://www.facebook.com/Ellantir" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </nav>
 
-        <!-- Secção de Contacto -->
-        <section id="contacto">
-            <h1>Contacto</h1>
-            <form action="https://example.com/submit-form" method="POST">
-                <input type="text" name="nome" placeholder="Nome" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="mensagem" rows="5" placeholder="Escreva a sua mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+        <!-- Conteúdo principal -->
+        <main>
+            <!-- Secção de Biografia -->
+            <section id="biografia">
+                <h1>Biography</h1>
+                <p>Fred Olaio, a Portuguese-born author, was destined for a life of creativity and imagination...</p>
+            </section>
+
+            <!-- Secção de Obras Publicadas -->
+            <section id="obras">
+                <h1>Obras Publicadas</h1>
+                <div class="obras">
+                    <div class="obra">
+                        <h3>Ellantir: A Falha da Criação</h3>
+                        <p>Parte 1 da saga Ellantir, em língua portuguesa.</p>
+                    </div>
+                    <div class="obra">
+                        <h3>Ellantir: The Flaw in Creation</h3>
+                        <p>Part 1 of the Ellantir saga, in English language.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Secção de Vídeo de Apresentação -->
+            <section class="video-container">
+                <h1>Apresentação</h1>
+                <iframe src="https://z-p3-video-prg1-1.xx.fbcdn.net/v/t42.1790-2/234403505_148349780766811_2186015875243020130_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=55d0d3&efg=eyJybHIiOjQxMiwicmxhIjo1MTIsInZlbmNvZGVfdGFnIjoic3ZlX3NkIiwidmlkZW9faWQiOjkzMzM1MTM0MDU1MzU4NX0%3D&_nc_ohc=0X536dp8EOoQ7kNvgHgPskq&rl=412&vabr=229&_nc_ht=z-p3-video-prg1-1.xx&edm=AGo2L-IEAAAA&_nc_gid=Au_-KUBzl-xIN7_BScXapNH&oh=00_AYCftzqgJctDlNJhh9vFcy8qZ1IYdkIAoHaWYHMDNaIWqQ&oe=66ED3531" title="Vídeo de Apresentação"></iframe>
+            </section>
+
+            <!-- Secção de Contacto -->
+            <section id="contacto">
+                <h1>Contacto</h1>
+                <form action="https://example.com/submit-form" method="POST">
+                    <input type="text" name="nome" placeholder="Nome" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="mensagem" rows="5" placeholder="Escreva a sua mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </main>
+    </div>
 
 </body>
 </html>
